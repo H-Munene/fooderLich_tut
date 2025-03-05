@@ -21,8 +21,6 @@ class _BottomNavState extends State<BottomNav> {
   ];
 
   var pages = [
-    ProfilePage(),
-
     HomePage(),
     Center(
       child: Column(
@@ -32,6 +30,7 @@ class _BottomNavState extends State<BottomNav> {
         ],
       ),
     ),
+    ProfilePage(),
   ];
 
   void _currentBottomNavPage(int currentIndex) {
@@ -50,8 +49,8 @@ class _BottomNavState extends State<BottomNav> {
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
+            backgroundColor: Colors.white,
+            elevation: 0,
             currentIndex: _index,
             onTap: _currentBottomNavPage,
             items: bottomNavBarItems

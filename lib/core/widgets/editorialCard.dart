@@ -25,7 +25,7 @@ class EditorialCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             image: DecorationImage(
                 image: Image.asset(
-                  "art_of_dough.jpg",
+                  "assets/art_of_dough.jpg",
                 ).image,
                 fit: BoxFit.cover)),
       ),

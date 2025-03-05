@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class FooderLichTheme {
   static Color cardBackgroundColor = Colors.grey;
+  static Color favorite = Colors.red;
 
   static ThemeData light() {
     return ThemeData(
