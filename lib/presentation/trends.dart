@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fooder_lich/core/models/trend_chips.dart';
+import 'package:fooder_lich/models/trend_chips.dart';
 import 'package:fooder_lich/core/theme.dart';
 
 class TrendsPage extends StatefulWidget {
