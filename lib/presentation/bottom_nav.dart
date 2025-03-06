@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
 import 'package:fooder_lich/presentation/home.dart';
 import 'package:fooder_lich/presentation/profile.dart';
+import 'package:fooder_lich/presentation/trends.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -15,21 +16,14 @@ class _BottomNavState extends State<BottomNav> {
   int _index = 0;
 
   var bottomNavBarItems = [
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: 'Home'),
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.gift), label: 'Card'),
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.person), label: 'Profile')
+    BottomNavigationBarItem(icon: Icon(CupertinoIcons.compass), label: 'Explore'),
+    BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Recipes'),
+    BottomNavigationBarItem(icon: Icon(CupertinoIcons.list_dash), label: 'To Buy')
   ];
 
-  var pages = [
+  List<Widget> pages = [
     HomePage(),
-    Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Cards'),
-        ],
-      ),
-    ),
+    TrendsPage(),
     ProfilePage(),
   ];
 
@@ -56,6 +50,6 @@ class _BottomNavState extends State<BottomNav> {
             items: bottomNavBarItems
                 .map((bottomNavBarItem) => bottomNavBarItem)
                 .toList()),
-        body: pages[_index]);
+        body: SafeArea(child: Center(child: pages[_index])));
   }
 }

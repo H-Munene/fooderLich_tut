@@ -6,11 +6,10 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: ProfileCard(
-            user: 'Mike Katz',
-            specialty: "Smoothie Connoisseur",
-            type: "Recipe",
-            item: "Smoothie"));
+    return ProfileCard(
+        user: 'Mike Katz',
+        specialty: "Smoothie Connoisseur",
+        type: "Recipe",
+        item: "Smoothie");
   }
 }
