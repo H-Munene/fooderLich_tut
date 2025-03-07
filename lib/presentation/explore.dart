@@ -32,21 +32,24 @@ class _ExplorePageState extends State<ExplorePage> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             final recipes = snapshot.data ?? [];
-    
-            return ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  final editorialCard = recipes[index];
-                  return EditorialCard(
-                      title: editorialCard.title,
-                      description: editorialCard.description,
-                      chef: editorialCard.chef,
-                      imageUrl: editorialCard.imageUrl);
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(width: 25);
-                },
-                itemCount: recipes.length);
+
+            return Padding(
+              padding: EdgeInsets.all(5),
+              child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final editorialCard = recipes[index];
+                    return EditorialCard(
+                        title: editorialCard.title,
+                        description: editorialCard.description,
+                        chef: editorialCard.chef,
+                        imageUrl: editorialCard.imageUrl);
+                  },
+                  separatorBuilder: (context, index) {
+                    return SizedBox(width: 15);
+                  },
+                  itemCount: recipes.length),
+            );
           } else {
             return CupertinoActivityIndicator();
           }
