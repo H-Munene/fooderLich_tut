@@ -1,0 +1,26 @@
+[
+    {
+        "label" : "Spaghetti and Meatballs",        
+        "imageUrl" : "assets/food_pics/food_1.jpg"
+    },
+    {
+        "label" : "Tomato Soup",        
+        "imageUrl" : "assets/food_pics/food_2.jpg"
+    },
+    {
+        "label" : "Grilled Cheese",        
+        "imageUrl" : "assets/food_pics/food_3.jpg"
+    },
+    {
+        "label" : "Chocolate Chip Cookies",        
+        "imageUrl" : "assets/food_pics/food_4.jpg"
+    },
+    {
+        "label" : "Taco Salad",        
+        "imageUrl" : "assets/food_pics/food_5.jpg"
+    },
+    {
+        "label" : "Hawaiian Pizza",        
+        "imageUrl" : "assets/food_pics/food_6.jpg"
+    }
+]

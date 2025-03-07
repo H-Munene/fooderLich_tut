@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FooderLichTheme {
+  
   static Color cardBackgroundColor = Colors.grey;
   static Color favorite = Colors.red;
 
   static ThemeData light() {
     return ThemeData(
+      primaryColor: Colors.green,
         brightness: Brightness.light,
         checkboxTheme: CheckboxThemeData(
             fillColor: WidgetStateColor.resolveWith((states) => Colors.black)),
@@ -27,6 +29,7 @@ class FooderLichTheme {
 
   static ThemeData dark() {
     return ThemeData(
+      primaryColor: Colors.green,
       brightness: Brightness.dark,
       appBarTheme: AppBarTheme(
         foregroundColor: Colors.white,

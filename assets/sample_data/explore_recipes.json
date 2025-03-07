@@ -1,0 +1,20 @@
+[
+    {
+        "title" : "The Art of Dough",
+        "description" : "Learn to make the perfect bread",
+        "chef" : "Ray Weinreich",
+        "imageUrl" : "assets/food_pics/food_7.jpg"
+    },
+    {
+        "title" : "A Touch of Cheese",
+        "description" : "Cheese as a 'spice'",
+        "chef" : "Kutzwa Maden",
+        "imageUrl" : "assets/food_pics/food_8.jpg"
+    },
+    {
+        "title" : "Wine renewed",
+        "description" : "A Starter to top it all",
+        "chef" : "Chaimer Ponderir",
+        "imageUrl" : "assets/food_pics/food_9.jpg"
+    }
+]

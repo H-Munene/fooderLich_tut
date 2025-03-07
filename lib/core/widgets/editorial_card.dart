@@ -6,13 +6,15 @@ class EditorialCard extends StatelessWidget {
   final String title;
   final String description;
   final String chef;
+  final String imageUrl;
 
   const EditorialCard(
       {super.key,
-      required this.category,
       required this.title,
       required this.description,
-      required this.chef});
+      required this.chef,
+      required this.imageUrl})
+      : category = "Editor's Choice";
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class EditorialCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             image: DecorationImage(
                 image: Image.asset(
-                  "assets/art_of_dough.jpg",
+                  imageUrl,
                 ).image,
                 fit: BoxFit.cover)),
       ),

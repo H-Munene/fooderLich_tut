@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
+import 'package:fooder_lich/presentation/explore.dart';
 import 'package:fooder_lich/presentation/home.dart';
 import 'package:fooder_lich/presentation/profile.dart';
 import 'package:fooder_lich/presentation/trends.dart';
@@ -23,6 +24,7 @@ class _BottomNavState extends State<BottomNav> {
 
   List<Widget> pages = [
     HomePage(),
+    // ExplorePage(),
     TrendsPage(),
     ProfilePage(),
   ];
@@ -50,6 +52,6 @@ class _BottomNavState extends State<BottomNav> {
             items: bottomNavBarItems
                 .map((bottomNavBarItem) => bottomNavBarItem)
                 .toList()),
-        body: SafeArea(child: Center(child: pages[_index])));
+        body: SafeArea(child: pages[_index]));
   }
 }
