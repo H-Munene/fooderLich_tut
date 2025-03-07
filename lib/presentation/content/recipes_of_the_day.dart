@@ -17,7 +17,7 @@ class RecipesOfTheDay extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recipes of the day!",
+            "Recipes of the day! 🔍",
             style: FooderLichTheme.lightTextTheme.titleLarge,
           ),
           SizedBox(

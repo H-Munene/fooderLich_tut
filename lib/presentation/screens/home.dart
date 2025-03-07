@@ -21,8 +21,8 @@ class HomePage extends StatelessWidget {
 
             //TODO: unified list view
             if (friendsPosts != null && recipesOfTheDay != null) {
-              return RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay);
-              // return FriendsPosts(friendFeed: friendsPosts);
+              // return RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay);
+              return FriendsPosts(friendFeed: friendsPosts);
             }
             // no data
             return Center(
