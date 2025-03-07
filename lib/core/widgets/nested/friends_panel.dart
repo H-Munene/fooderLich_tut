@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
 import 'package:fooder_lich/core/widgets/profile_picture.dart';
 
-class FriendsPanel extends StatelessWidget {
+class FriendPanel extends StatelessWidget {
   final String profileImageUrl;
   final String comment;
   final String timestamp;
 
-  const FriendsPanel(
+  const FriendPanel(
       {super.key,
       required this.profileImageUrl,
       required this.comment,
