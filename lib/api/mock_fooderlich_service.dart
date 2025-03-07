@@ -5,6 +5,10 @@ import 'package:fooder_lich/models/editorial.dart';
 import 'package:fooder_lich/models/friends_feed.dart';
 
 class MockFooderlichService {
+
+
+
+  
   Future<List<Editorial>> getExploreData() async {
     final loadExploreData =
         await rootBundle.loadString("assets/sample_data/explore_recipes.json");
@@ -24,10 +28,10 @@ class MockFooderlichService {
     final friendsDecodeFeed =
         jsonDecode(loadFriendsFeed);
         
-    final List<Map<String, dynamic>> friendsFeed =
+    final List<dynamic> friendsFeed =
         friendsDecodeFeed["feed"];
 
-    return friendsFeed
+     return friendsFeed
         .map((individualFeed) =>
             FriendsFeed.fromJson(Map<String, dynamic>.from(individualFeed)))
         .toList();

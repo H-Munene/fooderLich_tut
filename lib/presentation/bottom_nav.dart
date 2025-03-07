@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
-import 'package:fooder_lich/presentation/explore.dart';
-import 'package:fooder_lich/presentation/home.dart';
-import 'package:fooder_lich/presentation/profile.dart';
-import 'package:fooder_lich/presentation/trends.dart';
+import 'package:fooder_lich/presentation/screens/home.dart';
+import 'package:fooder_lich/presentation/screens/profile.dart';
+import 'package:fooder_lich/presentation/screens/recipes.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -17,16 +16,18 @@ class _BottomNavState extends State<BottomNav> {
   int _index = 0;
 
   var bottomNavBarItems = [
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.compass), label: 'Explore'),
+    BottomNavigationBarItem(
+        icon: Icon(CupertinoIcons.compass), label: 'Explore'),
     BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Recipes'),
-    BottomNavigationBarItem(icon: Icon(CupertinoIcons.list_dash), label: 'To Buy')
+    BottomNavigationBarItem(
+        icon: Icon(CupertinoIcons.list_dash), label: 'To Buy')
   ];
 
   List<Widget> pages = [
-    // HomePage(),
-    ExplorePage(),
-    TrendsPage(),
-    ProfilePage(),
+// ExplorePage(),
+    HomePage(),
+    RecipePage(),
+    ProfilePage()
   ];
 
   void _currentBottomNavPage(int currentIndex) {
