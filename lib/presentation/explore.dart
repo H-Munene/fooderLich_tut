@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/api/mock_fooderlich_service.dart';
-import 'package:fooder_lich/core/widgets/editorial_card.dart';
+import 'package:fooder_lich/core/widgets/nested/editorial_card.dart';
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fooder_lich/core/widgets/editorial_card.dart';
+import 'package:fooder_lich/core/widgets/nested/editorial_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

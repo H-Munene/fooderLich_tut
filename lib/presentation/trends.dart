@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooder_lich/core/widgets/nested/friends_panel.dart';
 import 'package:fooder_lich/models/trend_chips.dart';
 import 'package:fooder_lich/core/theme.dart';
 
@@ -23,11 +24,21 @@ class _TrendsPageState extends State<TrendsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: Image.asset('assets/chopping_board.jpg').image,
-              fit: BoxFit.cover)),
-      child: _trendsLayout(),
+      // decoration: BoxDecoration(
+      //     image: DecorationImage(
+      //         image: Image.asset('assets/chopping_board.jpg').image,
+      //         fit: BoxFit.cover)),
+      child: Column(
+        children: [
+          // _trendsLayout(),
+         
+          FriendsPanel(
+          profileImageUrl: "assets/profile_pics/person_joe.jpeg",
+          comment:
+              "Cooking up some steak 🥩 today, state should be rare, medium or medium well?",
+          timestamp: "50"),
+        ],
+      ),
     );
   }
 

@@ -67,6 +67,8 @@ flutter:
     - assets/
     - assets/food_pics/
     - assets/sample_data/
+    - assets/profile_pics/
+
 
 
   #   - images/a_dot_ham.jpeg

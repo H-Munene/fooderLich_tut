@@ -24,7 +24,7 @@ class FooderLichTheme {
           selectedItemColor: Colors.green,
         ),
         textTheme: lightTextTheme,
-        scaffoldBackgroundColor: Colors.white);
+        scaffoldBackgroundColor: const Color.fromARGB(255, 249, 249, 249));
   }
 
   static ThemeData dark() {

@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
+import 'package:fooder_lich/core/widgets/nested/friends_panel.dart';
+import 'package:fooder_lich/core/widgets/profile_picture.dart';
 
 class ProfileCard extends StatefulWidget {
   final String user;
@@ -80,7 +82,31 @@ class _ProfileCardState extends State<ProfileCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              userAvatar(user, specialty),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ProfilePicture(
+                    profileImageUrl: "assets/profile_pics/person_katz.jpeg",
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        user,
+                        style: FooderLichTheme.lightTextTheme.bodyMedium,
+                        textAlign: TextAlign.start,
+                      ),
+                      Text(
+                        specialty,
+                        style: FooderLichTheme.lightTextTheme.labelMedium,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               GestureDetector(
                 onTap: () => _toggleFavorite(),
                 child: Icon(
@@ -94,40 +120,6 @@ class _ProfileCardState extends State<ProfileCard> {
           )
         ],
       ),
-    );
-  }
-
-//avatar, name, specialty
-  Widget userAvatar(String user, String specialty) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        CircleAvatar(
-          radius: 25,
-          backgroundColor: Colors.white,
-          child: CircleAvatar(
-            foregroundColor: FooderLichTheme.cardBackgroundColor,
-            backgroundColor: FooderLichTheme.cardBackgroundColor,
-          ),
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              user,
-              style: FooderLichTheme.lightTextTheme.bodyMedium,
-              textAlign: TextAlign.start,
-            ),
-            Text(
-              specialty,
-              style: FooderLichTheme.lightTextTheme.labelMedium,
-            ),
-          ],
-        ),
-      ],
     );
   }
 }

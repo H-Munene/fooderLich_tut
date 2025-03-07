@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:ffi';
 import 'package:flutter/services.dart';
 import 'package:fooder_lich/models/editorial.dart';
+import 'package:fooder_lich/models/friends_feed.dart';
 
 class MockFooderlichService {
   Future<List<Editorial>> getExploreData() async {
@@ -12,6 +14,22 @@ class MockFooderlichService {
     return exploreData
         .map((editorial) =>
             Editorial.fromJson(Map<String, dynamic>.from(editorial)))
+        .toList();
+  }
+
+  Future<List<FriendsFeed>> getFriendsFeed() async {
+    final loadFriendsFeed = await rootBundle
+        .loadString("assets/sample_data/sample_friends_feed.json");
+
+    final friendsDecodeFeed =
+        jsonDecode(loadFriendsFeed);
+        
+    final List<Map<String, dynamic>> friendsFeed =
+        friendsDecodeFeed["feed"];
+
+    return friendsFeed
+        .map((individualFeed) =>
+            FriendsFeed.fromJson(Map<String, dynamic>.from(individualFeed)))
         .toList();
   }
 }
