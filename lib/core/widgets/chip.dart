@@ -11,8 +11,8 @@ class CustomChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        color: WidgetStatePropertyAll<Color>(
-            const Color.fromARGB(255, 66, 66, 66)),
+        color: const WidgetStatePropertyAll<Color>(
+            Color.fromARGB(255, 66, 66, 66)),
         label: Text(chipName,
             style: FooderLichTheme.darkTextTheme.bodyMedium!
                 .copyWith(fontSize: 12)),

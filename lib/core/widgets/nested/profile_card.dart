@@ -36,12 +36,12 @@ class _ProfileCardState extends State<ProfileCard> {
     return Container(
       height: 450,
       width: 350,
-      padding: EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: FooderLichTheme.cardBackgroundColor,
           image: DecorationImage(
-              image: Image.asset("assets/smoothie.jpg").image,
+              image: Image.asset('assets/smoothie.jpg').image,
               fit: BoxFit.cover)),
       child: Stack(
         children: [
@@ -72,7 +72,7 @@ class _ProfileCardState extends State<ProfileCard> {
 
   Widget userDetails(String user, String specialty) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       height: 50,
       width: double.infinity,
       child: Column(
@@ -82,12 +82,11 @@ class _ProfileCardState extends State<ProfileCard> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ProfilePicture(
-                    profileImageUrl: "assets/profile_pics/person_katz.jpeg",
+                  const ProfilePicture(
+                    profileImageUrl: 'assets/profile_pics/person_katz.jpeg',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(

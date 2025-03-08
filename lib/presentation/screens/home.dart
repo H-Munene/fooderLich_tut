@@ -19,35 +19,26 @@ class HomePage extends StatelessWidget {
             final recipesOfTheDay = snapshot.data?.recipesOfTheDay;
 
             if (friendsFeed != null && recipesOfTheDay != null) {
-              // return RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay);
-              // return FriendsPosts(friendsFeed: friendsFeed);
               return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomScrollView(
                     slivers: [
-                      // SliverToBoxAdapter(
-                      //   child:
-                      //       RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay),
-                      // ),
-
                       SliverToBoxAdapter(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Text(
-                            "Recipes of the Day! 🔍",
+                            'Recipes of the Day! 🔍',
                             style: FooderLichTheme.lightTextTheme.titleLarge
                                 ?.copyWith(fontSize: 22),
                           ),
                         ),
                       ),
-
                       RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay),
-
                       SliverToBoxAdapter(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Text(
-                            "Social Chefs! 👨‍🍳",
+                            'Social Chefs! 👨‍🍳',
                             style: FooderLichTheme.lightTextTheme.titleLarge
                                 ?.copyWith(fontSize: 22),
                           ),
@@ -60,40 +51,13 @@ class HomePage extends StatelessWidget {
             // no data
             return Center(
               child: Text(
-                "No recipes. No friends feed",
+                'No recipes. No friends feed',
                 style: FooderLichTheme.lightTextTheme.headlineSmall,
               ),
             );
           } else {
-            return Center(child: CupertinoActivityIndicator());
+            return const Center(child: CupertinoActivityIndicator());
           }
         });
   }
 }
-
-
-
-
-// FutureBuilder(
-//         future: _mockFooderlichService.getHomePageFeed(),
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.done) {
-//             final friendsPosts = snapshot.data?.friendsFeed;
-//             final recipesOfTheDay = snapshot.data?.recipesOfTheDay;
-
-//             //TODO: unified list view
-//             if (friendsPosts != null && recipesOfTheDay != null) {
-//               // return RecipesOfTheDay(recipesOfTheDay: recipesOfTheDay);
-//               return FriendsPosts(friendFeed: friendsPosts);
-//             }
-//             // no data
-//             return Center(
-//               child: Text(
-//                 "No recipes. No friends feed",
-//                 style: FooderLichTheme.lightTextTheme.headlineSmall,
-//               ),
-//             );
-//           } else {
-//             return Center(child: CupertinoActivityIndicator());
-//           }
-//         });

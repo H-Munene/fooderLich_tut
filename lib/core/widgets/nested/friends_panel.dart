@@ -23,7 +23,7 @@ class FriendPanel extends StatelessWidget {
           ProfilePicture(
             profileImageUrl: profileImageUrl,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Expanded(
@@ -36,6 +36,7 @@ class FriendPanel extends StatelessWidget {
                       ?.copyWith(color: Colors.grey),
                 ),
                 Text(
+                  // ignore: prefer_single_quotes
                   "$timestamp mins ago",
                   style: FooderLichTheme.lightTextTheme.bodyMedium
                       ?.copyWith(fontWeight: FontWeight.bold),

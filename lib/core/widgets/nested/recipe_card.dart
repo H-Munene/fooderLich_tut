@@ -19,7 +19,7 @@ class RecipeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //zooms image among other stuff :)
+      //zooms image and stack content among other stuff :)
       height: 350,
       width: 350,
       decoration: BoxDecoration(

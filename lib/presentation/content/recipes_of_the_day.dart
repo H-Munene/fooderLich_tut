@@ -23,43 +23,10 @@ class RecipesOfTheDay extends StatelessWidget {
                   imageUrl: recipesOfTheDay[index].imageUrl);
             },
             separatorBuilder: (context, index) {
-              return SizedBox(width: 8);
+              return const SizedBox(width: 8);
             },
             itemCount: recipesOfTheDay.length),
       ),
     );
-
-    // return Column(
-    //   mainAxisSize: MainAxisSize.min,
-    //   crossAxisAlignment: CrossAxisAlignment.start,
-    //   children: [
-    //     Text(
-    //       "Recipes of the day! 🔍",
-    //       style: FooderLichTheme.lightTextTheme.titleLarge?.copyWith(fontSize: 22),
-    //     ),
-    //     SizedBox(
-    //       height: 5,
-    //     ),
-    //     SizedBox(
-    //       //constrains the listview
-    //       height: 400,
-    //       width: 450,
-
-    //       child: ListView.separated(
-    //           scrollDirection: Axis.horizontal,
-    //           itemBuilder: (contexet, index) {
-    //             return RecipeCard(
-    //                 title: recipesOfTheDay[index].title,
-    //                 description: recipesOfTheDay[index].description,
-    //                 chef: recipesOfTheDay[index].chef,
-    //                 imageUrl: recipesOfTheDay[index].imageUrl);
-    //           },
-    //           separatorBuilder: (context, index) {
-    //             return SizedBox(width: 8);
-    //           },
-    //           itemCount: recipesOfTheDay.length),
-    //     ),
-    //   ],
-    // );
   }
 }

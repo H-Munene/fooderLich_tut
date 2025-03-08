@@ -17,27 +17,9 @@ class FriendsPosts extends StatelessWidget {
               comment: friendsFeed[index].comment,
               timestamp: friendsFeed[index].timestamp);
         },
-        separatorBuilder: (context, index) => Divider(
+        separatorBuilder: (context, index) => const Divider(
               indent: 20,
               endIndent: 20,
             ));
   }
 }
-
-
-
-
-      
-//           ListView.separated(
-//             itemCount: friendsFeed.length,
-//             shrinkWrap: true,
-//             itemBuilder: (context, index) {
-//               return FriendPanel(
-//                   profileImageUrl: friendsFeed[index].profileImageUrl,
-//                   comment: friendsFeed[index].comment,
-//                   timestamp: friendsFeed[index].timestamp);
-//             },
-//             separatorBuilder: (context, index) {
-//               return Divider();
-//             },
-//           ),

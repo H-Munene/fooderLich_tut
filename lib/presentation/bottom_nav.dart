@@ -16,18 +16,18 @@ class _BottomNavState extends State<BottomNav> {
   int _index = 0;
 
   var bottomNavBarItems = [
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(CupertinoIcons.compass), label: 'Explore'),
-    BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Recipes'),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Recipes'),
+    const BottomNavigationBarItem(
         icon: Icon(CupertinoIcons.list_dash), label: 'To Buy')
   ];
 
   List<Widget> pages = [
 // ExplorePage(),
-    HomePage(),
-    RecipePage(),
-    ProfilePage()
+    const HomePage(),
+    const RecipePage(),
+    const ProfilePage()
   ];
 
   void _currentBottomNavPage(int currentIndex) {
@@ -41,7 +41,7 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            "FooderLich",
+            'FooderLich',
             style: FooderLichTheme.lightTextTheme.titleLarge,
           ),
         ),

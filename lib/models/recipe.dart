@@ -5,6 +5,6 @@ class Recipe {
   final String label;
   final String imageUrl;
 
-  Recipe(this.label, this.imageUrl) : id = Uuid().v4();
+  Recipe(this.label, this.imageUrl) : id = const Uuid().v4();
 
 }

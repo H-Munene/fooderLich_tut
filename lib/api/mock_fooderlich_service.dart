@@ -15,7 +15,7 @@ class MockFooderlichService {
 
   Future<List<Editorial>> _getRecipesOfTheDay() async {
     final loadExploreData =
-        await rootBundle.loadString("assets/sample_data/explore_recipes.json");
+        await rootBundle.loadString('assets/sample_data/explore_recipes.json');
 
     final List<dynamic> exploreData = jsonDecode(loadExploreData);
 
@@ -27,11 +27,11 @@ class MockFooderlichService {
 
   Future<List<FriendsFeed>> _getFriendsFeed() async {
     final loadFriendsFeed = await rootBundle
-        .loadString("assets/sample_data/sample_friends_feed.json");
+        .loadString('assets/sample_data/sample_friends_feed.json');
 
     final friendsDecodeFeed = jsonDecode(loadFriendsFeed);
 
-    final List<dynamic> friendsFeed = friendsDecodeFeed["feed"];
+    final List<dynamic> friendsFeed = friendsDecodeFeed['feed'];
 
     return friendsFeed
         .map((individualFeed) =>
