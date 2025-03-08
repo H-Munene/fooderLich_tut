@@ -1,6 +1,6 @@
 # fooder_lich
 
-A new Flutter project.
+A new Flutter project following the flutter apprentice guide
 
 ## Getting Started
 
