@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
 import 'package:fooder_lich/presentation/screens/home.dart';
 import 'package:fooder_lich/presentation/screens/profile.dart';
-import 'package:fooder_lich/presentation/screens/recipes.dart';
+import 'package:fooder_lich/presentation/screens/recipes_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});

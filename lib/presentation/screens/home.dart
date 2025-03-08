@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             final friendsFeed = snapshot.data?.friendsFeed;
             final recipesOfTheDay = snapshot.data?.recipesOfTheDay;
 
-            if (friendsFeed != null && recipesOfTheDay != null) {
+            if (friendsFeed!.isNotEmpty && recipesOfTheDay!.isNotEmpty) {
               return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomScrollView(

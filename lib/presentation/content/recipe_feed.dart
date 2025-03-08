@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/widgets/nested/recipe_feed_card.dart';
 import 'package:fooder_lich/models/recipe.dart';
 
-class RecipeFeed extends StatefulWidget {
+class RecipeFeedGrid extends StatefulWidget {
   final List<Recipe> recipes;
 
-  const RecipeFeed({super.key, required this.recipes});
+  const RecipeFeedGrid({super.key, required this.recipes});
 
   @override
-  State<RecipeFeed> createState() => _RecipeFeedState();
+  State<RecipeFeedGrid> createState() => _RecipeFeedGridState();
 }
 
-class _RecipeFeedState extends State<RecipeFeed> {
+class _RecipeFeedGridState extends State<RecipeFeedGrid> {
   bool isFavorite = false;
 
   void toggleFavorite() {
