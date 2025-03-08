@@ -2,6 +2,8 @@
 
 A new Flutter project following the flutter apprentice guide
 
+![explore_page_fooderlich](https://github.com/user-attachments/assets/2fa037bc-4b2d-4364-a365-c7f940f8b938)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
