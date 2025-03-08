@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fooder_lich/core/widgets/nested/recipe_card.dart';
+import 'package:fooder_lich/core/widgets/nested/recipe_editorial_card.dart';
 import 'package:fooder_lich/models/editorial.dart';
 
 class RecipesOfTheDay extends StatelessWidget {
@@ -16,7 +16,7 @@ class RecipesOfTheDay extends StatelessWidget {
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemBuilder: (contexet, index) {
-              return RecipeCard(
+              return RecipeEditorialCard(
                   title: recipesOfTheDay[index].title,
                   description: recipesOfTheDay[index].description,
                   chef: recipesOfTheDay[index].chef,

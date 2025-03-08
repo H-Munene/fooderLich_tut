@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
 
-class RecipeCard extends StatelessWidget {
+class RecipeEditorialCard extends StatelessWidget {
   final String category;
   final String title;
   final String description;
   final String chef;
   final String imageUrl;
 
-  const RecipeCard(
+  const RecipeEditorialCard(
       {super.key,
       required this.title,
       required this.description,
