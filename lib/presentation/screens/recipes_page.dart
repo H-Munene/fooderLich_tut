@@ -18,10 +18,13 @@ class RecipePage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.done) {
             final recipes = snapshot.data?.recipes;
             if (recipes!.isNotEmpty) {
-              return CustomScrollView(
-                slivers: [
-                  RecipeFeedGrid(recipes: recipes),
-                ],
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomScrollView(
+                  slivers: [
+                    RecipeFeedGrid(recipes: recipes),
+                  ],
+                ),
               );
             }
             //empty list
