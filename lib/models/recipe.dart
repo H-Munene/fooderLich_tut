@@ -19,4 +19,7 @@ class Recipe {
       required this.source,
       required this.information})
       : id = const Uuid().v4();
+
+  factory Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
+  Map<String, dynamic> toJson() => _$RecipeToJson(this);
 }

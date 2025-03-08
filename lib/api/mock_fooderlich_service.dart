@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:fooder_lich/models/editorial.dart';
 import 'package:fooder_lich/models/friends_feed.dart';
 import 'package:fooder_lich/models/homepage_feed.dart';
+import 'package:fooder_lich/models/recipe.dart';
+import 'package:fooder_lich/models/recipe_feed.dart';
 
 class MockFooderlichService {
   Future<HomepageFeed> getHomePageFeed() async {
@@ -11,6 +13,12 @@ class MockFooderlichService {
 
     return HomepageFeed(
         recipesOfTheDay: _recipesOfTheDay, friendsFeed: _friendsFeed);
+  }
+
+  Future<RecipeFeed> getRecipeFeed() async {
+    final _recipeFeed = await _getRecipes();
+
+    return RecipeFeed(recipes: _recipeFeed);
   }
 
   Future<List<Editorial>> _getRecipesOfTheDay() async {
@@ -36,6 +44,17 @@ class MockFooderlichService {
     return friendsFeed
         .map((individualFeed) =>
             FriendsFeed.fromJson(Map<String, dynamic>.from(individualFeed)))
+        .toList();
+  }
+
+  Future<List<Recipe>> _getRecipes() async {
+    final loadRecipe =
+        await rootBundle.loadString('assets/sample_data/sample_recipes.json');
+    final recipeDecoded = jsonDecode(loadRecipe);
+    final List<dynamic> recipes = recipeDecoded['recipes'];
+
+    return recipes
+        .map((recipe) => Recipe.fromJson(Map<String, dynamic>.from(recipe)))
         .toList();
   }
 }
