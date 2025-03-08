@@ -23,7 +23,7 @@ class RecipeCard extends StatelessWidget {
       height: 350,
       width: 350,
       decoration: BoxDecoration(
-          color: Colors.amber,
+          color: FooderLichTheme.cardBackgroundColor,
           borderRadius: BorderRadius.circular(12),
           image: DecorationImage(
               image: Image.asset(

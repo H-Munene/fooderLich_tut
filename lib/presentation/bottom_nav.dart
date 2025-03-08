@@ -53,6 +53,6 @@ class _BottomNavState extends State<BottomNav> {
             items: bottomNavBarItems
                 .map((bottomNavBarItem) => bottomNavBarItem)
                 .toList()),
-        body: SafeArea(child: Center(child: pages[_index])));
+        body: SafeArea(child: pages[_index]));
   }
 }

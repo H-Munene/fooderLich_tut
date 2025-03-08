@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/theme.dart';
-import 'package:fooder_lich/core/widgets/nested/friends_panel.dart';
 import 'package:fooder_lich/core/widgets/profile_picture.dart';
 
 class ProfileCard extends StatefulWidget {

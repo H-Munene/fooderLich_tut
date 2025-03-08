@@ -1,38 +1,43 @@
-import 'package:flutter/cupertino.dart';
-import 'package:fooder_lich/core/theme.dart';
+import 'package:flutter/material.dart';
 import 'package:fooder_lich/core/widgets/nested/friends_panel.dart';
 import 'package:fooder_lich/models/friends_feed.dart';
 
 class FriendsPosts extends StatelessWidget {
-  final List<FriendsFeed> friendFeed;
+  final List<FriendsFeed> friendsFeed;
 
-  const FriendsPosts({super.key, required this.friendFeed});
+  const FriendsPosts({super.key, required this.friendsFeed});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-      
-        children: [
-          Text(
-              "Social Chefs! 👨‍🍳",
-              style: FooderLichTheme.lightTextTheme.titleLarge,
-            ),
-      
-          Expanded(
-            child: ListView.builder(
-                itemCount: friendFeed.length,
-                itemBuilder: (context, index) {
-                  return FriendPanel(
-                      profileImageUrl: friendFeed[index].profileImageUrl,
-                      comment: friendFeed[index].comment,
-                      timestamp: friendFeed[index].timestamp);
-                }),
-          ),
-        ],
-      ),
-    );
+    return SliverList.separated(
+      itemCount: friendsFeed.length,
+        itemBuilder: (context, index) {
+          return FriendPanel(
+              profileImageUrl: friendsFeed[index].profileImageUrl,
+              comment: friendsFeed[index].comment,
+              timestamp: friendsFeed[index].timestamp);
+        },
+        separatorBuilder: (context, index) => Divider(
+              indent: 20,
+              endIndent: 20,
+            ));
   }
 }
+
+
+
+
+      
+//           ListView.separated(
+//             itemCount: friendsFeed.length,
+//             shrinkWrap: true,
+//             itemBuilder: (context, index) {
+//               return FriendPanel(
+//                   profileImageUrl: friendsFeed[index].profileImageUrl,
+//                   comment: friendsFeed[index].comment,
+//                   timestamp: friendsFeed[index].timestamp);
+//             },
+//             separatorBuilder: (context, index) {
+//               return Divider();
+//             },
+//           ),
