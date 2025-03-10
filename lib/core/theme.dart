@@ -24,7 +24,9 @@ class FooderLichTheme {
           selectedItemColor: Colors.green,
         ),
         textTheme: lightTextTheme,
-        scaffoldBackgroundColor: const Color.fromARGB(255, 249, 249, 249));
+        scaffoldBackgroundColor: Colors.white
+        // scaffoldBackgroundColor: const Color.fromARGB(255, 249, 249, 249)
+        );
   }
 
   static ThemeData dark() {
@@ -69,7 +71,7 @@ class FooderLichTheme {
     ),
     bodyMedium: GoogleFonts.lexendExa(
       fontSize: 14.0,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w400,
       color: Colors.black,
     ),
     labelMedium: GoogleFonts.lexendExa(

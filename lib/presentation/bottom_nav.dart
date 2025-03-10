@@ -4,6 +4,7 @@ import 'package:fooder_lich/core/theme.dart';
 import 'package:fooder_lich/presentation/screens/home.dart';
 import 'package:fooder_lich/presentation/screens/profile.dart';
 import 'package:fooder_lich/presentation/screens/recipes_page.dart';
+import 'package:fooder_lich/presentation/screens/to_buy.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -27,7 +28,7 @@ class _BottomNavState extends State<BottomNav> {
 // ExplorePage(),
     const HomePage(),
     const RecipePage(),
-    const ProfilePage()
+    const BuyPage()
   ];
 
   void _currentBottomNavPage(int currentIndex) {
@@ -45,6 +46,7 @@ class _BottomNavState extends State<BottomNav> {
             style: FooderLichTheme.lightTextTheme.titleLarge,
           ),
         ),
+        floatingActionButton: (_index == 2) ? FloatingActionButton(shape: const CircleBorder(),onPressed: (){}, child: const Icon(Icons.add),) : null,
         bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.white,
             elevation: 0,
