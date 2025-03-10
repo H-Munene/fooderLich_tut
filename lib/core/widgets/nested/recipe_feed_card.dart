@@ -21,8 +21,8 @@ class RecipeFeedCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 130,
-          width: 200,
+          height: 170,
+          width: 300,
           decoration: BoxDecoration(
               color: FooderLichTheme.cardBackgroundColor,
               image: DecorationImage(image: Image.asset(dishImage).image, fit: BoxFit.cover),
