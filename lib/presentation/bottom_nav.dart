@@ -46,7 +46,13 @@ class _BottomNavState extends State<BottomNav> {
             style: FooderLichTheme.lightTextTheme.titleLarge,
           ),
         ),
-        floatingActionButton: (_index == 2) ? FloatingActionButton(shape: const CircleBorder(),onPressed: (){}, child: const Icon(Icons.add),) : null,
+        floatingActionButton: (_index == 2)
+            ? FloatingActionButton(
+                shape: const CircleBorder(),
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              )
+            : null,
         bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.white,
             elevation: 0,

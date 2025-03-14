@@ -34,8 +34,6 @@ class _RecipeFeedGridState extends State<RecipeFeedGrid> {
           );
         }),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, crossAxisSpacing: 10.0)
-            
-            );
+            crossAxisCount: 2, crossAxisSpacing: 10.0));
   }
 }

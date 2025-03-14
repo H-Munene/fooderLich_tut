@@ -13,7 +13,8 @@ class RecipeFeedCard extends StatelessWidget {
       required this.title,
       required this.duration,
       required this.dishImage,
-      required this.toggleFavorite, required this.isFavorite});
+      required this.toggleFavorite,
+      required this.isFavorite});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +26,10 @@ class RecipeFeedCard extends StatelessWidget {
           width: 300,
           decoration: BoxDecoration(
               color: FooderLichTheme.cardBackgroundColor,
-              image: DecorationImage(image: Image.asset(dishImage).image, fit: BoxFit.cover),
+              image: DecorationImage(
+                  image: Image.asset(dishImage).image, fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(12)),
-              //TODO: use provider / bloc -> if in list of favorited or else
+          //TODO: use provider / bloc -> if in list of favorited or else
           // child: Column(
           //   crossAxisAlignment: CrossAxisAlignment.end,
           //   children: [

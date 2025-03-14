@@ -8,7 +8,9 @@ class BuyPage extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          const SizedBox(height: 80,),
+          const SizedBox(
+            height: 80,
+          ),
           Container(
             height: 350,
             width: 350,

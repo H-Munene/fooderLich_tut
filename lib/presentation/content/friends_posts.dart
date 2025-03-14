@@ -10,7 +10,7 @@ class FriendsPosts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList.separated(
-      itemCount: friendsFeed.length,
+        itemCount: friendsFeed.length,
         itemBuilder: (context, index) {
           return FriendPanel(
               profileImageUrl: friendsFeed[index].profileImageUrl,

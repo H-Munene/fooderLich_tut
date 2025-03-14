@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FooderLichTheme {
-  
   static Color cardBackgroundColor = Colors.grey;
   static Color favorite = Colors.red;
 
   static ThemeData light() {
     return ThemeData(
-      primaryColor: Colors.green,
+        primaryColor: Colors.green,
         brightness: Brightness.light,
         checkboxTheme: CheckboxThemeData(
             fillColor: WidgetStateColor.resolveWith((states) => Colors.black)),
@@ -71,7 +70,7 @@ class FooderLichTheme {
     ),
     bodyMedium: GoogleFonts.lexendExa(
       fontSize: 14.0,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
     labelMedium: GoogleFonts.lexendExa(
@@ -80,37 +79,36 @@ class FooderLichTheme {
       color: Colors.black,
     ),
   );
-
   static TextTheme darkTextTheme = TextTheme(
     headlineLarge: GoogleFonts.lexendExa(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
+      color: Colors.black,
     ),
     headlineMedium: GoogleFonts.lexendExa(
       fontSize: 28.0,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: Colors.black,
     ),
     headlineSmall: GoogleFonts.lexendExa(
       fontSize: 26.0,
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.black,
     ),
     titleLarge: GoogleFonts.lexendExa(
       fontSize: 22.0,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
+      color: Colors.black,
     ),
     bodyMedium: GoogleFonts.lexendExa(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: Colors.black,
     ),
     labelMedium: GoogleFonts.lexendExa(
       fontSize: 12.0,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: Colors.black,
     ),
   );
 }
